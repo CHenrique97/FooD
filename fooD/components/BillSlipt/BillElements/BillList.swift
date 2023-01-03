@@ -7,23 +7,22 @@
 
 import SwiftUI
 
-struct billStruct {
-    let price:Double
-    let unit:Double
-    let id = UUID()
-}
-var itemList:[billStruct] = [billStruct(price:  10, unit: 10),billStruct(price:  10, unit: 0.5)]
+
+
 struct BillList: View {
-    
+    @ObservedObject var itemList: BillItems
     var body: some View {
-        ForEach(itemList,id: \.id) {item in
+        ForEach(itemList.bills,id: \.id) {item in
             BillItem(unit: item.unit, price: item.price)
         }
     }
 }
 
 struct BillList_Previews: PreviewProvider {
+    
+
     static var previews: some View {
-        BillList()
+        let list = BillItems()
+        BillList(itemList:list)
     }
 }

@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @ObservedObject var itemList = BillItems()
+   
     var body: some View {
+       
         ZStack{
             Color("backgroundColor").ignoresSafeArea()
             VStack{
                 TotalSum(totalPrice:1000,totalTip: 10,tipPercentage: 10)
                 Divider()
-                BillList()
+                BillSplit()
                 Spacer()
                 Spacer()
                 Divider()

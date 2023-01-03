@@ -14,6 +14,11 @@
 		A8421128295DC9F10011FDB3 /* fooDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421127295DC9F10011FDB3 /* fooDTests.swift */; };
 		A8421132295DC9F10011FDB3 /* fooDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421131295DC9F10011FDB3 /* fooDUITests.swift */; };
 		A8421134295DC9F10011FDB3 /* fooDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421133295DC9F10011FDB3 /* fooDUITestsLaunchTests.swift */; };
+		A8421146295DD3520011FDB3 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421145295DD3520011FDB3 /* Footer.swift */; };
+		A842114A295DF50C0011FDB3 /* FooterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421149295DF50C0011FDB3 /* FooterButton.swift */; };
+		A842114E295E356E0011FDB3 /* TotalSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A842114D295E356E0011FDB3 /* TotalSum.swift */; };
+		A8421151295E40430011FDB3 /* BillItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421150295E40430011FDB3 /* BillItem.swift */; };
+		A8421153295E4AFA0011FDB3 /* BillList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421152295E4AFA0011FDB3 /* BillList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		A842112D295DC9F10011FDB3 /* fooDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fooDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8421131295DC9F10011FDB3 /* fooDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fooDUITests.swift; sourceTree = "<group>"; };
 		A8421133295DC9F10011FDB3 /* fooDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fooDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8421145295DD3520011FDB3 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		A8421149295DF50C0011FDB3 /* FooterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterButton.swift; sourceTree = "<group>"; };
+		A842114D295E356E0011FDB3 /* TotalSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSum.swift; sourceTree = "<group>"; };
+		A8421150295E40430011FDB3 /* BillItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillItem.swift; sourceTree = "<group>"; };
+		A8421152295E4AFA0011FDB3 /* BillList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		A8421114295DC9F00011FDB3 /* fooD */ = {
 			isa = PBXGroup;
 			children = (
+				A8421142295DD2DA0011FDB3 /* components */,
 				A8421115295DC9F00011FDB3 /* fooDApp.swift */,
 				A8421117295DC9F00011FDB3 /* ContentView.swift */,
 				A8421119295DC9F10011FDB3 /* Assets.xcassets */,
@@ -127,6 +138,42 @@
 				A8421133295DC9F10011FDB3 /* fooDUITestsLaunchTests.swift */,
 			);
 			path = fooDUITests;
+			sourceTree = "<group>";
+		};
+		A8421142295DD2DA0011FDB3 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				A842114C295E35420011FDB3 /* BillSlipt */,
+				A8421148295DF4DC0011FDB3 /* Footer */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		A8421148295DF4DC0011FDB3 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				A8421145295DD3520011FDB3 /* Footer.swift */,
+				A8421149295DF50C0011FDB3 /* FooterButton.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		A842114C295E35420011FDB3 /* BillSlipt */ = {
+			isa = PBXGroup;
+			children = (
+				A842114F295E3F460011FDB3 /* BillElements */,
+				A842114D295E356E0011FDB3 /* TotalSum.swift */,
+			);
+			path = BillSlipt;
+			sourceTree = "<group>";
+		};
+		A842114F295E3F460011FDB3 /* BillElements */ = {
+			isa = PBXGroup;
+			children = (
+				A8421150295E40430011FDB3 /* BillItem.swift */,
+				A8421152295E4AFA0011FDB3 /* BillList.swift */,
+			);
+			path = BillElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A842114A295DF50C0011FDB3 /* FooterButton.swift in Sources */,
+				A8421146295DD3520011FDB3 /* Footer.swift in Sources */,
 				A8421118295DC9F00011FDB3 /* ContentView.swift in Sources */,
+				A8421151295E40430011FDB3 /* BillItem.swift in Sources */,
+				A8421153295E4AFA0011FDB3 /* BillList.swift in Sources */,
 				A8421116295DC9F00011FDB3 /* fooDApp.swift in Sources */,
+				A842114E295E356E0011FDB3 /* TotalSum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

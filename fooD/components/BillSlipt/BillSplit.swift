@@ -17,7 +17,7 @@ struct Bill{
 class BillItems: ObservableObject {
 
 
-  @Published var bills: [Bill] = [Bill(price:  10, unit: 10)]
+  @Published var bills: [Bill] = []
 
 
 }
@@ -28,7 +28,8 @@ struct BillSplit: View {
         VStack(){
             BillList(itemList: itemList)
             Spacer()
-            ItemAdder()
+            ItemAdder( itemList: itemList)
+
         }
     }
 }

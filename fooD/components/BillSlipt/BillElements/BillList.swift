@@ -10,8 +10,9 @@ import SwiftUI
 
 
 struct BillList: View {
-    @ObservedObject var itemList: BillItems
+    @ObservedObject var itemList: BillItems = BillItems()
     var body: some View {
+        
         ForEach(itemList.bills,id: \.id) {item in
             BillItem(unit: item.unit, price: item.price)
         }

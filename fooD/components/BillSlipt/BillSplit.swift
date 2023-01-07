@@ -8,22 +8,10 @@
 import SwiftUI
 import Combine
 
-struct Bill{
-    let price:Double
-    let unit:Double
-    let id = UUID()
-}
 
-class BillItems: ObservableObject {
-
-
-  @Published var bills: [Bill] = []
-
-
-}
 
 struct BillSplit: View {
-    @StateObject var itemList = BillItems()
+    @ObservedObject var itemList: BillItems = BillItems()
     var body: some View {
         VStack(){
             BillList(itemList: itemList)

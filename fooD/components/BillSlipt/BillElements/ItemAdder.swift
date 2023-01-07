@@ -13,13 +13,7 @@ struct ItemAdder: View {
     @State private var number: String = ""
     @State var formattedQuantity = "1"
     @ObservedObject var itemList: BillItems = BillItems()
-    private var numberFormatter: NumberFormatter {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 0
-        return formatter
-    }
+
     func quantFormat(up:Bool) -> Void {
         if (up){
             quantity+=1

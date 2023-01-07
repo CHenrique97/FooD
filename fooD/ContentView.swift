@@ -7,7 +7,22 @@
 
 import SwiftUI
 
+struct Bill: Codable, Equatable {
+    let price:Double
+    let unit:Double
+    var id = UUID()
+    static func == (lhs: Bill, rhs: Bill) -> Bool {
+      return lhs.id == rhs.id
+    }
+}
 
+class BillItems: ObservableObject {
+
+
+  @Published var bills: [Bill] = []
+
+
+}
 struct ContentView: View {
     @ObservedObject var itemList = BillItems()
    
@@ -16,9 +31,9 @@ struct ContentView: View {
         ZStack{
             Color("backgroundColor").ignoresSafeArea()
             VStack{
-                TotalSum(totalPrice:1000,totalTip: 10,tipPercentage: 10)
+                TotalSum(itemList: itemList)
                 Divider()
-                BillSplit()
+                BillSplit(itemList: itemList)
                 Spacer()
                 Spacer()
                 Divider()

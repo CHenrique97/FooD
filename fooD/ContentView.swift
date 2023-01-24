@@ -7,38 +7,27 @@
 
 import SwiftUI
 
-struct Bill: Codable, Equatable {
-    let price:Double
-    let unit:Double
-    var id = UUID()
-    static func == (lhs: Bill, rhs: Bill) -> Bool {
-      return lhs.id == rhs.id
+
+struct FontModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.foregroundColor(.black)
     }
 }
 
-class BillItems: ObservableObject {
-
-
-  @Published var bills: [Bill] = []
-
-
-}
 struct ContentView: View {
-    @ObservedObject var itemList = BillItems()
+  
    
     var body: some View {
        
         ZStack{
             Color("backgroundColor").ignoresSafeArea()
             VStack{
-                TotalSum(itemList: itemList)
-                Divider()
-                BillSplit(itemList: itemList)
-                Spacer()
+                MainScreen()
                 Spacer()
                 Divider()
                 Footer()
             }
+            
         }
     }
 }
@@ -48,5 +37,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
             .previewDisplayName("iPhone 14 Pro Max")
+            
     }
 }

@@ -13,8 +13,8 @@ func tipCalculations(list:BillItems,tipPercentage:String) -> [Double]{
         result + (item.unit * item.price)
     }
     let tipConverted = Double(tipPercentage) ?? 0.00
-    var totalTip = totalPricePreTip*(tipConverted/100)
-    var totalPrice = totalPricePreTip + totalTip
+    let totalTip = totalPricePreTip*(tipConverted/100)
+    let totalPrice = totalPricePreTip + totalTip
     return[ totalTip,totalPrice]
     }
 struct  TotalSum: View {
@@ -37,7 +37,11 @@ struct  TotalSum: View {
                 HStack{
                     Text("Tip percentage:")
                     TextField(" % ", text: $tipDesired)
-                        .frame(width: 50.0)
+                        .frame(width: 50.0).onChange(of:tipDesired){_ in
+                            //I know this is wrong,maybe will change in the future
+                            self.totalTip = tipCalculations(list:itemList,tipPercentage:tipDesired)[0]
+                            self.totalPrice = tipCalculations(list:itemList,tipPercentage:tipDesired)[1]
+                        }
                 }
                 .padding(.trailing, -8.0)
             }.frame(maxWidth: .infinity,minHeight: 60)

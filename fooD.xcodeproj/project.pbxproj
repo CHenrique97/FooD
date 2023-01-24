@@ -21,6 +21,7 @@
 		A8421153295E4AFA0011FDB3 /* BillList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8421152295E4AFA0011FDB3 /* BillList.swift */; };
 		A84211572964D3AA0011FDB3 /* BillSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84211562964D3AA0011FDB3 /* BillSplit.swift */; };
 		A84211592964DAA20011FDB3 /* ItemAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84211582964DAA20011FDB3 /* ItemAdder.swift */; };
+		A8FF24C8297C9DD800E41FBF /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FF24C7297C9DD800E41FBF /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A8421152295E4AFA0011FDB3 /* BillList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillList.swift; sourceTree = "<group>"; };
 		A84211562964D3AA0011FDB3 /* BillSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplit.swift; sourceTree = "<group>"; };
 		A84211582964DAA20011FDB3 /* ItemAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdder.swift; sourceTree = "<group>"; };
+		A8FF24C7297C9DD800E41FBF /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				A84211562964D3AA0011FDB3 /* BillSplit.swift */,
 				A842114F295E3F460011FDB3 /* BillElements */,
 				A842114D295E356E0011FDB3 /* TotalSum.swift */,
+				A8FF24C7297C9DD800E41FBF /* MainScreen.swift */,
 			);
 			path = BillSlipt;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				A84211592964DAA20011FDB3 /* ItemAdder.swift in Sources */,
 				A842114A295DF50C0011FDB3 /* FooterButton.swift in Sources */,
+				A8FF24C8297C9DD800E41FBF /* MainScreen.swift in Sources */,
 				A84211572964D3AA0011FDB3 /* BillSplit.swift in Sources */,
 				A8421146295DD3520011FDB3 /* Footer.swift in Sources */,
 				A8421118295DC9F00011FDB3 /* ContentView.swift in Sources */,
